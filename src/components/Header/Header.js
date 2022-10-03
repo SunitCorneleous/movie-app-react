@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XCircleIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,11 @@ const Header = () => {
       </h1>
       <NavBar navOptions={open}></NavBar>
       <Bars3Icon
-        className="h-9 w-9  md:hidden"
+        className={`h-9 w-9 md:hidden ${open ? "hidden" : "static"}`}
+        onClick={() => setOpen(!open)}
+      />
+      <XCircleIcon
+        className={`h-9 w-9 md:hidden ${open ? "static" : "hidden"}`}
         onClick={() => setOpen(!open)}
       />
     </div>
