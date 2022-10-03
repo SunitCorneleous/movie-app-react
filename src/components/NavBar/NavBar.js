@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ navOptions }) => {
   return (
-    <ul className="flex">
+    <ul
+      className={`bg-base-300 md:bg-base-100 md:flex absolute  md:static ease-in duration-300 ${
+        navOptions ? "left-0 top-0 h-full" : "left-[-200px] top-0 h-full"
+      }`}
+    >
       <li className="mx-3 text-xl">
         <Link to="/home">Home</Link>
       </li>
