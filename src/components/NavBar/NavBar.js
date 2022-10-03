@@ -8,13 +8,13 @@ const NavBar = ({ navOptions }) => {
         navOptions ? "left-0 top-0 h-full" : "left-[-200px] top-0 h-full"
       }`}
     >
-      <li className="mx-3 text-xl">
+      <li className="mx-3 text-xl my-16">
         <Link to="/home">Home</Link>
       </li>
-      <li className="mx-3 text-xl">
+      <li className="mx-3 text-xl my-16">
         <Link to="/movies">Movies</Link>
       </li>
-      <li className="mx-3 text-xl">
+      <li className="mx-3 text-xl my-16">
         <Link to="/tvseries">Tv Series & Shows</Link>
       </li>
     </ul>
