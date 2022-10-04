@@ -3,6 +3,9 @@ import Home from "../components/Home/Home";
 import Movies from "../components/Movies/Movies";
 import Series from "../components/Series/Series";
 import Main from "../layout/Main";
+import { requests } from "../requests/requests";
+
+//tv/popular
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +31,9 @@ export const router = createBrowserRouter([
       {
         path: "/movies",
         element: <Movies></Movies>,
+        loader: () => {
+          return fetch(requests.popularMovies);
+        },
       },
       {
         path: "/tvseries",
