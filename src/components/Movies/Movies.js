@@ -2,9 +2,9 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const Movies = () => {
-  const popularMovies = useLoaderData();
+  const { results } = useLoaderData();
 
-  console.log(popularMovies);
+  console.log(results);
 
   return (
     <div className="w-11/12 md:w-10/12 mx-auto">
