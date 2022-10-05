@@ -4,7 +4,7 @@ const Show = ({ show }) => {
   const poster = `https://image.tmdb.org/t/p/original/${show.poster_path}`;
 
   return (
-    <div className="card w-2/10 bg-base-100 shadow-xl">
+    <div className="card w-2/10 bg-base-100 shadow-xl border-solid border-2 border-orange-600">
       <figure>
         <img src={poster} alt="movie" />
       </figure>
